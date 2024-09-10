@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeus's Background</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function gradeQuiz() {
+            var score = 0;
+
+            var q1 = document.getElementById("q1").value;
+            if (q1 === "Leto") {
+                score++;
+            }
+
+            var q2 = document.getElementById("q2").value;
+            if (q2 === "Thunderbolt") {
+                score++;
+            }
+
+            var q3 = document.getElementById("q3").value;
+            if (q3 === "Athena") {
+                score++;
+            }
+
+            document.getElementById("result").innerText = "Your score is: " + score + "/3";
+        }
+    </script>
+</head>
+<body>
+    <div id="logo-container">
+        <img src="images/zeus-log.png" alt="Zeus Logo" class="logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="zeus.html">Who is Zeus?</a></li>
+            <li><a href="children.html">Children of Zeus</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h1>Who is Zeus?</h1>
+            <p>Zeus is the god of the sky, lightning, and thunder in ancient Greek religion, and he is the king of the gods on Mount Olympus. He is a central figure in Greek mythology and appears in many stories related to the founding and function of the cosmos and the gods. Zeus was the youngest son of the Titans Cronus and Rhea, and he played a key role in overthrowing the Titans and establishing the reign of the Olympian gods.</p>
+            <img src="images/who_is_zeus.jpg" alt="Statue of Zeus" width="400" class="section-image">
+        </section>
+
+        <section>
+            <h3>Zeus's 5 Most Popular Children</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Child</th>
+                        <th>Mother</th>
+                        <th>Domain/Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Athena</td>
+                        <td>Metis</td>
+                        <td>Goddess of Wisdom and War</td>
+                    </tr>
+                    <tr>
+                        <td>Apollo</td>
+                        <td>Leto</td>
+                        <td>God of the Sun, Music, and Prophecy</td>
+                    </tr>
+                    <tr>
+                        <td>Artemis</td>
+                        <td>Leto</td>
+                        <td>Goddess of the Hunt and Moon</td>
+                    </tr>
+                    <tr>
+                        <td>Hermes</td>
+                        <td>Maia</td>
+                        <td>Messenger of the Gods, God of Trade</td>
+                    </tr>
+                    <tr>
+                        <td>Hercules</td>
+                        <td>Alcmene</td>
+                        <td>Hero, God of Strength</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h3>Interesting Facts About Zeus</h3>
+            <ol>
+                <li>Zeus overthrew his father, Cronus, to become the king of the gods.</li>
+                <li>He wielded a powerful thunderbolt as his primary weapon.</li>
+                <li>Zeus was known to take many forms to interact with mortals, including an eagle, a bull, and even a shower of gold.</li>
+                <li>He was often seen as a protector of the city, law, and order in Greek culture.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Come Back and Test Your Knowledge!</h3>
+            <form>
+                <p>1. Who is the mother of Apollo?</p>
+                <select id="q1">
+                    <option value="none">-- Select an answer --</option>
+                    <option value="Metis">Metis</option>
+                    <option value="Leto">Leto</option>
+                    <option value="Maia">Maia</option>
+                    <option value="Alcmene">Alcmene</option>
+                </select>
+
+                <p>2. What is Zeus's primary weapon?</p>
+                <select id="q2">
+                    <option value="none">-- Select an answer --</option>
+                    <option value="Trident">Trident</option>
+                    <option value="Thunderbolt">Thunderbolt</option>
+                    <option value="Sword">Sword</option>
+                    <option value="Scepter">Scepter</option>
+                </select>
+
+                <p>3. Who was born from Zeus's head fully armored?</p>
+                <select id="q3">
+                    <option value="none">-- Select an answer --</option>
+                    <option value="Apollo">Apollo</option>
+                    <option value="Artemis">Artemis</option>
+                    <option value="Athena">Athena</option>
+                    <option value="Hermes">Hermes</option>
+                </select>
+
+                <p><button type="button" onclick="gradeQuiz()">Submit Quiz</button></p>
+            </form>
+
+            <p id="result" style="font-weight: bold;"></p>
+        </section>
+    </main>
+</body>
+</html>
